@@ -1,0 +1,67 @@
+here is the fix that circumvents the inability of ledger's native radar facility to detect 1-sat fees
+
+fees lower than 40 csat-1 fees fly totally undetected under the radar native to the ledger nano-s facility and those fees < $1 are being intermittently 
+intercepted.
+
+by design, electron cash radar sweeps even the lowest 1-sats.
+
+if u've already used ledger with btc or eth then allow yourself at least an hour to apply this fix which hooks up the ledger radar
+station with the adjoining electron cash radar facilty. If you're totally new to ledger than allow a full-on crypto-weekend to learn
+the special ropes needed for detecting low flying 1 sat objects.
+
+set up your bch wallet to operate on the split chain. install bitcoin cash wallet 1.1.8 from the chrome browser and launch it..
+
+click both ledger buttons together on the bitcoin cash window to open your bch wallet in ledger, check that browser-support = no on the device...toggle between "use wallet to view" and "settings" then dual-click on settings
+
+then install electroncash.org as follows
+
+1) check u have the latest version here https://github.com/fyookball/keys-n-hashes/tree/master/sigs-and-sums ... 
+it says mac 3.1.2 but i assume that applies also to windows..
+
+2) file / new-restore / standard / add hardware wallet
+
+3) the native electron wallet is called default-wallet, when the ledger connects the second wallet on electron it will be called
+ wallet-1 or wallet-2
+
+4) after the first connection, installing electron subsequently will remember wallet-1 or 2 and take u directly there where u can
+see the ledger address of your main account.
+
+5) when u send from ledger u will see the tx show up in electron way before ledger picks it up, so u must not disconnect electron
+ until your funds go through via 6 confirmations
+
+TIPS FOR ESTABLISHING THE CONNECTION
+
+1) everytime u hit an error on electroncash.org reboot, open the bch wallet with the code even though your timeout period maybe
+ 10 mins
+
+2) try swopping usb ports
+
+3) if new/restore takes u straight into wallet-1 or 2 and u can see your ledger addresses called "my account" inside electron,
+ then the connection is ok, even though u get no confirmation message and even though u cant see you additional ledger adresses..
+
+4) if u get the "install wizard" dialog when u click new/restore , then click choose to see what wallets u have got if u see that
+ wallet-1 and wallet-2 have both been created then delete both and start again
+
+5) if u get the "install wizard" dialog when u click new/restore check and u see either the wallet-1 or wallet-2 screen, then 
+check that u are seeing your ledger addreses on wallet-1 or 2
+
+TIPS FOR HELPING TX SUCCEED
+
+1) allow 24 hours for confirmation
+
+2) if u have more than 1 account and u reset app data...via settings on chrome browser support, click on tools/ reset application data. Next time u go into ledger your bch balance will look like zero. but when u recoonect with electroncash, the funds in your main account will show up first and then several hours later the funds in your additional accounts should also be recovered.
+
+4) if u get tx has succeeded then look at the electron report and give ledger an extra few hours to respond
+
+MORAL OF THE STORY
+
+be prepared to test the ledger to electron Interface with lots of patience. this is uncharted territory in the public domain as 
+this topic is off-limits for both wallet-providers, and they are very much limited how much they can comment about their unlikely liason.
+
+CAUTIONARY TALE
+
+before loading up your savings on a hardware wallet i suggest buy a trezor and a ledger or 2 trezors if u don't have the nerves for applying and testing this fix.
+
+load one device up with a few dollars of bch and few dollars of eth tokens, and practice cloning each wallet back and forth with and without a passphrase and with multiple accounts, so u can decide whether to use a passphrase or not. check 3 accounts on each machine, and if u have a ledger make sure to test the reset app data command with 3 accounts. [allow few hours for recovery process]
+
+when u'r proficient and confident then load up your saving / spending accounts onto one machine and clone the other. that process by now should be a breeze.
